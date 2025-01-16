@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-08T03:14:17.618Z",
+    "end": "2024-12-08T03:14:26.781Z",
+    "duration": 9163,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2231792-f3d3-4f46-a21c-1a073e6cb9e2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\contact-us.js",
+      "file": "cypress\\e2e\\automation-test-store\\contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e66b57f4-4b51-48a3-88b2-9220179806ed",
+          "title": "Test Contact Us Page via Automation Test Store",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to submit a successfull submission via contact us form",
+              "fullTitle": "Test Contact Us Page via Automation Test Store Should be able to submit a successfull submission via contact us form",
+              "timedOut": null,
+              "duration": 7400,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.automationteststore.com/\");\ncy.xpath('//a[text()=\"Contact Us\"]').click().then(function (linkHeaderText) {\n  cy.log(\"Link text: \" + linkHeaderText.text());\n});\ncy.get('@user').then(user => {\n  cy.xpath('//*[@id=\"ContactUsFrm_first_name\"]').type(user.firstName);\n  cy.xpath('//*[@id=\"ContactUsFrm_email\"]').type(user.email);\n});\ncy.xpath('//*[@id=\"ContactUsFrm_enquiry\"]').type(\"enquiry text test\");\ncy.xpath('//*[@id=\"ContactUsFrm\"]//button[@type=\"submit\"]').click();\ncy.xpath('//p[contains(text(),\"successfully sent\")]').should('contain.text', \"successfully\");",
+              "err": {},
+              "uuid": "3e2135ee-ceec-497e-9fab-b21d88c21568",
+              "parentUUID": "e66b57f4-4b51-48a3-88b2-9220179806ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e2135ee-ceec-497e-9fab-b21d88c21568"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7400,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

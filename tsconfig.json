@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "lib": ["es6"],
+    "module": "commonjs",
+    "target": "es5",
+    "types": ["cypress"],
+    "baseUrl": "./"  // Add this line to specify the base URL
+  },
+  "include": ["**/*.js", "cypress/**/*"]
+}
