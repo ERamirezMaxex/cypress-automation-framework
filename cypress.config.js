@@ -29,6 +29,10 @@ module.exports = defineConfig({
     reporterOptions: {
       configFile: 'reporter-config.json',
     },
+    retries : {
+      openMode : 3,
+      runMode : 3,
+    },
     env: {
       firstName: "Fer",
       webDriverUni_URL: "https://www.webdriveruniversity.com"
