@@ -35,7 +35,8 @@ module.exports = defineConfig({
     },
     env: {
       firstName: "Fer",
-      webDriverUni_URL: "https://www.webdriveruniversity.com"
+      webDriverUni_URL: "https://www.webdriveruniversity.com",
+      disableColors: true
 
     }
       
